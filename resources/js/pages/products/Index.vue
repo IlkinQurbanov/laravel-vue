@@ -83,7 +83,9 @@ const page = usePage();
                      <TableCell>{{ product.price }}</TableCell>
                      <TableCell>{{ product.description }}</TableCell>
                      <TableCell class="text-center">
-                        delete/edit
+                        <Link :href="route('products.edit', { id: product.id })">
+                            <Button class="bg-slate-600">Edit</Button>
+                        </Link>
                      </TableCell>
             
                 </TableRow>
